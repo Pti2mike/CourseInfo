@@ -1,14 +1,18 @@
 import Part from "./Part";
+import Total from "./Total";
 
-const Content = ({ courses }) => {
-  // console.log("Content: ", courses.parts);
+const Content = ({ course }) => {
+  // console.log("Content: ", course);
 
   return (
-    <div>
-      {courses.parts.map((part) => (
-        <Part key={part.id} parts={part} />
-      ))}
-    </div>
+    <>
+      <div>
+        {course.parts.map((part) => (
+          <Part key={part.id} parts={part} />
+        ))}
+      </div>
+      <Total course={course} />
+    </>
   );
 };
 

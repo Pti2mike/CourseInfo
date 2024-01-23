@@ -1,5 +1,5 @@
 const Total = ({ course }) => {
-  // console.log("Total: ", course.parts);
+  // console.log("Total: ", course);
 
   const totalExercices = course.parts.reduce((acc, part) => {
     return acc + part.exercises;

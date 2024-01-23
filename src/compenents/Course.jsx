@@ -6,8 +6,14 @@ const Course = (props) => {
 
   return (
     <>
-      <Header name={props.course.name} />
-      <Content courses={props.course} />
+      {props.courses.map((course) => (
+        <div key={course.id}>
+          <Header course={course} />
+          <Content course={course} />
+        </div>
+      ))}
+      {/* <Header name={props.course.name} />
+      <Content courses={props.course} /> */}
     </>
   );
 };

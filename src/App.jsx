@@ -1,5 +1,5 @@
 import Course from "./compenents/Course";
-// import Total from "./compenents/Total";
+import Total from "./compenents/Total";
 
 const App = () => {
   const course = {
@@ -21,6 +21,11 @@ const App = () => {
         exercises: 14,
         id: 3,
       },
+      {
+        name: "Redux",
+        exercises: 12,
+        id: 4,
+      },
     ],
   };
 
@@ -28,7 +33,7 @@ const App = () => {
     <div>
       <Course course={course} />
 
-      {/* <Total course={course} /> */}
+      <Total course={course} />
     </div>
   );
 };
